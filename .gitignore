@@ -31,5 +31,5 @@ Thumbs.db
 *.log
 
 # Django
-*.sqlite3
+# *.sqlite3
 staticfiles/
