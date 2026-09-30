@@ -1,0 +1,457 @@
+[
+{
+  "model": "accounts.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$SUIIoVkscOBrUtoUffzRYJ$T8Yvuy6NUy/VAnGyoBNdlgoMsb2b4O8DQI8eB0eqRVQ=",
+    "last_login": "2026-09-29T13:45:51.977Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-28T17:22:07Z",
+    "role": "ADMIN",
+    "base": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$hbtG9xIkE2kr9xIpTCk8Ce$BDJe+2gi+E5VNEFlLqxZwRcYMhEYN0t+XYfuCFxtSU4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Commander1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T10:32:47.601Z",
+    "role": "COMMANDER",
+    "base": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$U5YUmLIHDlmplOWDHS9szT$KR/t7Jqhhw3Q1PR/fwNOdsKHRN9MXIMBnMRoLROb8oA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Logistics1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T10:33:28.746Z",
+    "role": "LOGISTICS",
+    "base": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "assets.base",
+  "pk": 1,
+  "fields": {
+    "name": "Base Alpha",
+    "location": "Bengaluru"
+  }
+},
+{
+  "model": "assets.base",
+  "pk": 2,
+  "fields": {
+    "name": "Base Bravo",
+    "location": "Hydrabad"
+  }
+},
+{
+  "model": "assets.base",
+  "pk": 3,
+  "fields": {
+    "name": "Base Charlie",
+    "location": "Pune"
+  }
+},
+{
+  "model": "assets.equipmenttype",
+  "pk": 1,
+  "fields": {
+    "name": "Vehicle",
+    "description": ""
+  }
+},
+{
+  "model": "assets.equipmenttype",
+  "pk": 2,
+  "fields": {
+    "name": "Communication Equipment",
+    "description": ""
+  }
+},
+{
+  "model": "assets.equipmenttype",
+  "pk": 3,
+  "fields": {
+    "name": "Protective Equipment",
+    "description": ""
+  }
+},
+{
+  "model": "purchases.purchase",
+  "pk": 1,
+  "fields": {
+    "base": 1,
+    "equipment_type": 1,
+    "quantity": 10,
+    "purchase_date": "2026-09-28",
+    "created_by": 1,
+    "created_at": "2026-09-28T17:53:55.422Z"
+  }
+},
+{
+  "model": "purchases.purchase",
+  "pk": 2,
+  "fields": {
+    "base": 1,
+    "equipment_type": 2,
+    "quantity": 10,
+    "purchase_date": "2026-09-29",
+    "created_by": 1,
+    "created_at": "2026-09-29T10:14:42.599Z"
+  }
+},
+{
+  "model": "purchases.purchase",
+  "pk": 3,
+  "fields": {
+    "base": 3,
+    "equipment_type": 3,
+    "quantity": 12,
+    "purchase_date": "2026-09-30",
+    "created_by": 1,
+    "created_at": "2026-09-30T04:00:07.971Z"
+  }
+},
+{
+  "model": "transfers.transfer",
+  "pk": 1,
+  "fields": {
+    "from_base": 1,
+    "to_base": 2,
+    "equipment_type": 1,
+    "quantity": 3,
+    "transfer_date": "2026-09-28",
+    "created_by": 1,
+    "created_at": "2026-09-28T18:12:01.454Z"
+  }
+},
+{
+  "model": "transfers.transfer",
+  "pk": 2,
+  "fields": {
+    "from_base": 1,
+    "to_base": 3,
+    "equipment_type": 2,
+    "quantity": 2,
+    "transfer_date": "2026-09-29",
+    "created_by": 1,
+    "created_at": "2026-09-29T10:15:02.443Z"
+  }
+},
+{
+  "model": "transfers.transfer",
+  "pk": 3,
+  "fields": {
+    "from_base": 1,
+    "to_base": 2,
+    "equipment_type": 2,
+    "quantity": 1,
+    "transfer_date": "2026-09-29",
+    "created_by": 3,
+    "created_at": "2026-09-29T10:39:29.617Z"
+  }
+},
+{
+  "model": "transfers.transfer",
+  "pk": 4,
+  "fields": {
+    "from_base": 3,
+    "to_base": 1,
+    "equipment_type": 3,
+    "quantity": 2,
+    "transfer_date": "2026-09-30",
+    "created_by": 1,
+    "created_at": "2026-09-30T04:00:25.995Z"
+  }
+},
+{
+  "model": "transfers.transfer",
+  "pk": 5,
+  "fields": {
+    "from_base": 1,
+    "to_base": 3,
+    "equipment_type": 3,
+    "quantity": 1,
+    "transfer_date": "2026-09-30",
+    "created_by": 3,
+    "created_at": "2026-09-30T04:02:43.488Z"
+  }
+},
+{
+  "model": "operations.assignment",
+  "pk": 1,
+  "fields": {
+    "base": 1,
+    "equipment_type": 1,
+    "assigned_to": "Demo Personnel A",
+    "quantity": 2,
+    "assignment_date": "2026-09-29",
+    "created_by": 1,
+    "created_at": "2026-09-29T05:48:14.239Z"
+  }
+},
+{
+  "model": "operations.assignment",
+  "pk": 2,
+  "fields": {
+    "base": 1,
+    "equipment_type": 1,
+    "assigned_to": "Personnel B",
+    "quantity": 1,
+    "assignment_date": "2026-09-29",
+    "created_by": 1,
+    "created_at": "2026-09-29T10:24:33.978Z"
+  }
+},
+{
+  "model": "operations.assignment",
+  "pk": 3,
+  "fields": {
+    "base": 3,
+    "equipment_type": 1,
+    "assigned_to": "Personnel2",
+    "quantity": 2,
+    "assignment_date": "2026-09-30",
+    "created_by": 1,
+    "created_at": "2026-09-30T04:00:54.267Z"
+  }
+},
+{
+  "model": "operations.expenditure",
+  "pk": 1,
+  "fields": {
+    "base": 1,
+    "equipment_type": 1,
+    "quantity": 1,
+    "reason": "Training exercise",
+    "expenditure_date": "2026-09-29",
+    "created_by": 1,
+    "created_at": "2026-09-29T05:49:41.852Z"
+  }
+},
+{
+  "model": "operations.expenditure",
+  "pk": 2,
+  "fields": {
+    "base": 1,
+    "equipment_type": 1,
+    "quantity": 1,
+    "reason": "Trainning",
+    "expenditure_date": "2026-09-30",
+    "created_by": 1,
+    "created_at": "2026-09-29T10:26:58.110Z"
+  }
+},
+{
+  "model": "operations.expenditure",
+  "pk": 3,
+  "fields": {
+    "base": 3,
+    "equipment_type": 3,
+    "quantity": 1,
+    "reason": "Damage",
+    "expenditure_date": "2026-09-30",
+    "created_by": 1,
+    "created_at": "2026-09-30T04:01:16.982Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "action": "PURCHASE_CREATED",
+    "entity_type": "Purchase",
+    "entity_id": 1,
+    "details": "Purchased 10 Vehicle for Base Alpha",
+    "timestamp": "2026-09-28T17:53:55.436Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "action": "TRANSFER_CREATED",
+    "entity_type": "Transfer",
+    "entity_id": 1,
+    "details": "Transferred 3 Vehicle from Base Alpha to Base Bravo",
+    "timestamp": "2026-09-28T18:12:01.466Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 3,
+  "fields": {
+    "user": 1,
+    "action": "ASSET_ASSIGNED",
+    "entity_type": "Assignment",
+    "entity_id": 1,
+    "details": "Assigned 2 Vehicle to Demo Personnel A at Base Alpha",
+    "timestamp": "2026-09-29T05:48:14.298Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 4,
+  "fields": {
+    "user": 1,
+    "action": "ASSET_EXPENDED",
+    "entity_type": "Expenditure",
+    "entity_id": 1,
+    "details": "Expended 1 Vehicle at Base Alpha. Reason: Training exercise",
+    "timestamp": "2026-09-29T05:49:41.868Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "action": "PURCHASE_CREATED",
+    "entity_type": "Purchase",
+    "entity_id": 2,
+    "details": "Purchased 10 Communication Equipment for Base Alpha",
+    "timestamp": "2026-09-29T10:14:42.637Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 6,
+  "fields": {
+    "user": 1,
+    "action": "TRANSFER_CREATED",
+    "entity_type": "Transfer",
+    "entity_id": 2,
+    "details": "Transferred 2 Communication Equipment from Base Alpha to Base Charlie",
+    "timestamp": "2026-09-29T10:15:02.453Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 7,
+  "fields": {
+    "user": 1,
+    "action": "ASSET_ASSIGNED",
+    "entity_type": "Assignment",
+    "entity_id": 2,
+    "details": "Assigned 1 Vehicle to Personnel B at Base Alpha",
+    "timestamp": "2026-09-29T10:24:33.998Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 8,
+  "fields": {
+    "user": 1,
+    "action": "ASSET_EXPENDED",
+    "entity_type": "Expenditure",
+    "entity_id": 2,
+    "details": "Expended 1 Vehicle at Base Alpha. Reason: Trainning",
+    "timestamp": "2026-09-29T10:26:58.121Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 9,
+  "fields": {
+    "user": 3,
+    "action": "TRANSFER_CREATED",
+    "entity_type": "Transfer",
+    "entity_id": 3,
+    "details": "Transferred 1 Communication Equipment from Base Alpha to Base Bravo",
+    "timestamp": "2026-09-29T10:39:29.628Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 10,
+  "fields": {
+    "user": 1,
+    "action": "PURCHASE_CREATED",
+    "entity_type": "Purchase",
+    "entity_id": 3,
+    "details": "Purchased 12 Protective Equipment for Base Charlie",
+    "timestamp": "2026-09-30T04:00:07.994Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 11,
+  "fields": {
+    "user": 1,
+    "action": "TRANSFER_CREATED",
+    "entity_type": "Transfer",
+    "entity_id": 4,
+    "details": "Transferred 2 Protective Equipment from Base Charlie to Base Alpha",
+    "timestamp": "2026-09-30T04:00:26.000Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 12,
+  "fields": {
+    "user": 1,
+    "action": "ASSET_ASSIGNED",
+    "entity_type": "Assignment",
+    "entity_id": 3,
+    "details": "Assigned 2 Vehicle to Personnel2 at Base Charlie",
+    "timestamp": "2026-09-30T04:00:54.273Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 13,
+  "fields": {
+    "user": 1,
+    "action": "ASSET_EXPENDED",
+    "entity_type": "Expenditure",
+    "entity_id": 3,
+    "details": "Expended 1 Protective Equipment at Base Charlie. Reason: Damage",
+    "timestamp": "2026-09-30T04:01:16.991Z"
+  }
+},
+{
+  "model": "audit.auditlog",
+  "pk": 14,
+  "fields": {
+    "user": 3,
+    "action": "TRANSFER_CREATED",
+    "entity_type": "Transfer",
+    "entity_id": 5,
+    "details": "Transferred 1 Protective Equipment from Base Alpha to Base Charlie",
+    "timestamp": "2026-09-30T04:02:43.492Z"
+  }
+}
+]
